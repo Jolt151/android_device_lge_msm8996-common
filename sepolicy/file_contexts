@@ -52,7 +52,6 @@
 
 # NFC
 /dev/pn54[478]                                                      u:object_r:nfc_device:s0
-/data/vendor/nfc(/.*)?                                              u:object_r:nfc_vendor_data_file:s0
 
 # Persist
 /persist-lg(/.*)?                                                   u:object_r:persist_drm_file:s0
@@ -87,7 +86,10 @@
 /sys/devices/virtual/camera(/.*)?                       u:object_r:sysfs_camera:s0
 
 # perfd
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service.lge.msm8996         u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service.lge.msm8996         u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/perfd                                   u:object_r:perfd_exec:s0
 /data/misc/perfd(/.*)?                                              u:object_r:perfd_data_file:s0
 /data/system/perfd(/.*)?                                            u:object_r:perfd_data_file:s0
+
+# CND
+/data/connectivity(/.*)?              u:object_r:cnd_data_file:s0
